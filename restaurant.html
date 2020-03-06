@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>深圳麦当劳前海二餐厅</title>
+  <script type="text/javascript">
+      (function (){
+        var docEl = document.documentElement;
+
+        function setRemUnit(){
+          // 获取rem基准值
+          var rem = docEl.clientWidth / 10;
+
+          // 动态设置根元素html的font-size
+          docEl.style.fontSize = rem + 'px';
+        }
+
+        setRemUnit();
+
+        // 窗口大小变化时触发
+        window.addEventListener('resize',setRemUnit);
+
+        // 窗口出现在当前屏幕时触发 （有浏览器兼容问题）
+        window.addEventListener('pageshow',function(e){
+          if(e.persisted) {
+            setRemUnit();
+          }
+        });
+      })();
+  </script>
+  <link rel="stylesheet" href="lib/reset.css">
+  <link rel="stylesheet" href="common/navHeader/navHeader.css">
+  <link rel="stylesheet" href="common/headerTab/headerTab.css">
+  <link rel="stylesheet" href="restaurant/restaurant.css">
+</head>
+<body>
+    <!-- 头部开始 -->
+    <div class="nav">
+        <a href="index.html"><div class="backicon"></div></a>
+        <h4 class="title">深圳麦当劳前海二餐厅</h4>
+    </div>
+    <!-- 头部结束 -->
+
+    <!-- tabbar开始 -->
+    <div class="tab-bar"></div>
+    <!-- tabbar结束 -->
+
+    <!-- 商家内容区开始 -->
+    <div class="store-inner">
+        <div class="store-wrap">
+          <div class="store-basic">
+            <img src="http://p1.meituan.net/waimaipoi/8b2b00292ed6f2ed762858485c66a32a536824.jpg" alt="">
+            <div class="store-view">
+              <span>起送 ¥20</span>
+              <span class="ellipsis">亲，为了更符合您的口味，点餐时口味必选哦！没选口味的亲，本店就默认做微辣哦</span>
+              <span class="service-img"><img src="restaurant/img/zeng.png"> 提供高品质服务</span>
+            </div>
+          </div>
+          <div class="store-info">
+            <div class="store-adress">
+              <div class="adress">
+                <img src="restaurant/img/adress.png" alt="">
+                <span class="ellipsis">深圳市南山区南新路2084号(田夏商业大厦)(田夏商业大厦1楼)</span>
+              </div>
+              <div class="record">
+                <img src="restaurant/img/save.png" alt="">
+                <span>查看食品安全档案&nbsp;&nbsp;</span>
+                <span> ></span>
+              </div>
+            </div>
+            <div class="delivery-time">
+              <img src="restaurant/img/time.png" alt="">
+              <span>配送时间：05:30 - 22:30</span>
+            </div>
+            <div class="store-service">
+              <div class="notice">
+                <img src="restaurant/img/gonggao.png" alt="">
+                <span class="ellipsis">亲，为了更符合您的口味，点餐时口味必选哦！没选口味的亲，本店就默认做微辣哦</span>
+                <span>></span>
+              </div>
+              <div class="service">
+                <img src="restaurant/img/business.png" alt="">
+                <span>商家服务</span>
+                <img src="http://p1.meituan.net/xianfu/32200c3060be7903f62c9076308619ee734.png" alt="">
+                <span>该商家支持在线支付</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- 商家内容区结束 -->
+  <script src="lib/jQuery3.4.1.js"></script>
+  <script src="common/headerTab/headerTab.js"></script>
+  <script src="restaurant/restaurant.js"></script>
+</body>
+</html>

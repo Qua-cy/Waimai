@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>订单</title>
+  <script type="text/javascript">
+      (function (){
+        var docEl = document.documentElement;
+
+        function setRemUnit(){
+          // 获取rem基准值
+          var rem = docEl.clientWidth / 10;
+
+          // 动态设置根元素html的font-size
+          docEl.style.fontSize = rem + 'px';
+        }
+
+        setRemUnit();
+
+        // 窗口大小变化时触发
+        window.addEventListener('resize',setRemUnit);
+
+        // 窗口出现在当前屏幕时触发 （有浏览器兼容问题）
+        window.addEventListener('pageshow',function(e){
+          if(e.persisted) {
+            setRemUnit();
+          }
+        });
+      })();
+  </script>
+  <link rel="stylesheet" href="lib/reset.css">
+  <link rel="stylesheet" href="order/header/header.css">
+  <link rel="stylesheet" href="common/bottomBar/bottomBar.css">
+  <link rel="stylesheet" href="order/contentList/contentList.css">
+ 
+</head>
+<body>
+    <!-- 头部开始 -->
+    <div class="header">订单</div>
+    <!-- 头部结束 -->
+
+    <!-- 订单列表开始 -->
+    <div class="wrap">
+        <div class="order-list"></div>
+        <div class="loading">加载中...</div>
+    </div>
+    <!-- 订单列表结束 -->
+
+    <!-- 底部导航开始 -->
+    <div class="bottom-bar"></div>
+    <!-- 底部导航结束 -->
+
+  <script src="lib/jQuery3.4.1.js"></script>
+  <script src="common/bottomBar/bottomBar.js"></script>
+  <script src="order/contentList/contentList.js"></script>
+  
+</body>
+</html>
